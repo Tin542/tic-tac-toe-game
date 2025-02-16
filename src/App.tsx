@@ -3,6 +3,7 @@ import Board from "./components/board";
 import Scoreboard from "./components/scoreBoard";
 import ResetButton from "./components/resetButton";
 import { useTicTacToe } from "./hooks/useTicTacToe";
+import WinnerPopup from "./components/winnerPopup";
 
 const App: React.FC = () => {
   const { squares, winner, scores, winningCombination, handleClick, resetGame } = useTicTacToe();
@@ -12,11 +13,7 @@ const App: React.FC = () => {
       <h1 className="text-4xl font-bold mb-6">🎉 Tic-Tac-Toe 🎉</h1>
       <Scoreboard scores={scores} />
       <Board squares={squares} onClick={handleClick} winningCombination={winningCombination} />
-      {winner && (
-        <p className="text-2xl font-bold mt-4 animate-bounce">
-          {winner === "Draw" ? "It's a Draw! 😐" : `🎉 Winner: ${winner} 🎉`}
-        </p>
-      )}
+      <WinnerPopup winner={winner} onReset={resetGame} />
       <ResetButton onReset={resetGame} />
     </div>
   );
