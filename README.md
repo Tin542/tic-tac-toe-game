@@ -1,7 +1,8 @@
 # 🎲 Tic-Tac-Toe Game
 
 ## 📌 Description
-A simple yet interactive **Tic-Tac-Toe** game built with **Vite** and **React**.
+- A simple yet interactive **Tic-Tac-Toe** game built with **Vite** and **React**.
+- Demo: https://tic-tac-toe-game-zeta-five.vercel.app/
 
 ### 🛠 Tech Stack
 - **Frontend:** React + Vite
